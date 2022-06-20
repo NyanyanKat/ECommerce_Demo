@@ -1,0 +1,31 @@
+{
+  "name": "ECommerce",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.0",
+    "dotenv": "^16.0.1",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "express-validator": "^6.14.1",
+    "fs": "^0.0.1-security",
+    "hbs": "^4.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.1.1",
+    "uuid": "^8.3.2"
+  },
+  "nodemonConfig": {
+    "ext": "js,hbs,pug,html"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}

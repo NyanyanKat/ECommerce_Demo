@@ -1,0 +1,125 @@
+<style>
+    .glider {
+        height: 300px;
+        width: 300px;
+        position: relative;
+    }
+
+    input {
+        max-height: 200px;
+        max-width: 200px;
+        align-content: center;
+    }
+
+    .product{
+        position: relative;
+    }
+
+    .glider-prev,
+    .glider-next {
+        position: relative;
+    }
+
+    .slider__info {
+        background: rgba(0, 0, 0, 0.35);
+        left: 0;
+        bottom: 5px;
+        position: absolute;
+    }
+
+    .slider__info h3 {
+        font-size: 1em;
+        color: #fff;
+    }
+
+</style>
+
+
+<h3>Google Products</h3>
+<div class="glider-contain">
+    <div class="glider">
+        <div class="product">
+            <input type="image" id="1" src="https://i5.walmartimages.com/asr/173a8c84-8814-4ba5-b20f-340a4a11ac5a_6.bc4ae44b11d51cb8da4fb0902cda5b18.png" alt="Google Nest Hub Max" onClick="Info(1);">
+            <div class="slider-info">
+                <h4>Google Nest Hub Max</h4>
+            </div>
+        </div>
+        <div class="product">
+            <input type="image" id="2" src="https://i5.walmartimages.com/asr/76246acc-1b9e-4836-aff4-bf96ec4bd13e.34fe74678e196b204ed89e19914e7788.jpeg" alt="Google Nest Hello Smart" onClick="Info(2);">
+            <div class="slider-info">
+                <h4>Google Nest Hello Smart</h4>
+            </div>
+        </div>
+        <div class="product">
+            <input type="image" id="3"src="https://i5.walmartimages.com/asr/7c0fb539-899a-41d6-818f-d9a1d87be519.8d62cff6374d563146bc040aafc1a985.jpeg" alt="Chromecast with Google TV" onClick="Info(3);">
+            <div class="slider-info">
+                <h4>Chromecast with Google TV</h4>
+            </div>
+        </div>
+        <div class="product">
+            <input type="image" id="4" src="https://m.media-amazon.com/images/I/71QQZr2pNSL._AC_SL1500_.jpg" alt="Google Pixel 6" onClick="Info(4);">
+            <div class="slider-info">
+                <h4>Google Pixel 6</h4>
+            </div>
+        </div>
+        <div class="product">
+            <input type="image" id="5" src="https://m.media-amazon.com/images/I/61IzhD+qy+L._AC_SY300_SX300_.jpg" alt="Google Nest Wifi" onClick="Info(5);">
+            <div class="slider-info">
+                <h4>Google Nest Wifi</h4>
+            </div>
+        </div>
+        <div class="product">
+            <input type="image" id="6" src="https://i5.walmartimages.com/asr/f56c7bd7-46d5-4cfe-87a9-24329a26f571.f6b8c6b088dd5fe8c4fdbaee35474820.jpeg" alt="Google Nest Audio" onClick="Info(6);">
+            <div class="slider-info">
+                <h4>Google Nest Audio</h4>
+            </div>
+        </div>
+        <div class="product">
+            <input type="image" id="7" src="https://images-na.ssl-images-amazon.com/images/I/71GIRQHecXL.__AC_SX300_SY300_QL70_FMwebp_.jpg" alt="Google Nest Learning Thermostat" onClick="Info(7);">
+            <div class="slider-info">
+                <h4>Google Nest Learning Thermostat</h4>
+            </div>
+        </div>
+        <div class="product">
+            <input type="image" id="8" src="https://m.media-amazon.com/images/I/81sDDc7rKqL._AC_SL1500_.jpg" alt="Google Pixelbook Go" onClick="Info(8);">
+            <div class="slider-info">
+                <h4>Google Pixelbook Go</h4>
+            </div>
+        </div>
+        <div class="product">
+            <input type="image" id="9" src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6461/6461035cv13d.jpg" alt="Pixel Buds A-Series" onClick="Info(9);">
+            <div class="slider-info">
+                <h4>Pixel Buds A-Series</h4>
+            </div>
+        </div>
+        <div class="product">
+            <input type="image" id="10" src="https://cdn.vox-cdn.com/thumbor/5VWHzJk3xMxWYd6G-aK8V36nFEc=/0x0:1600x672/1520x1013/filters:focal(672x208:928x464):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/69701270/Copy_of_0204_0099__Titan_Main_KEY_v07_SIMP.0.png" alt="Titan Security Key" onClick="Info(10);">
+            <div class="slider-info">
+                <h4>Titan Security Key</h4>
+            </div>
+        </div>
+
+
+    </div>
+    <button aria-label="Previous" class="glider-prev">«</button>
+    <button aria-label="Next" class="glider-next">»</button>
+    <div role="tablist" class="dots"></div>
+    
+</div>
+
+<script>
+    new Glider(document.querySelector('.glider'), {
+        slidesToShow: 1,
+        dots: '.dots',
+        dragDistance: false,
+        arrows: {
+            prev: '.glider-prev',
+            next: '.glider-next',
+        }
+    });
+
+    function Info(id) {
+        const host = "http://localhost:3000";
+        window.location = `${host}/product/google/${id}`;
+    }
+</script>

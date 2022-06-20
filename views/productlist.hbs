@@ -1,0 +1,32 @@
+<div id="nav-placeholder" onload="loadBar()"></div>
+
+<h2>Product List</h2>
+<hr>
+{{#each item}}
+<div style="text-align:center;">
+    <h3>{{this.name}}</h3>
+    {{/each}}
+    {{#each item}}
+    <img src={{this.url}}>
+    {{/each}}
+    <span>Quantity: </span>
+    {{#each item}}
+    <span>{{this.quantity}}</span>
+    {{/each}}
+    <br><br>
+    <span>Price: $</span>
+    {{#each item}}
+    <span>{{this.price}}</span>
+    {{/each}}
+    {{!-- <ol>
+        <li><span>Name: </span></span>{{this.name}}</li>
+        <li><span>Quantity: </span>{{this.quantity}}</li>
+        <li><span>Price: </span>{{this.price}}</li>
+    </ol> --}}
+</div>
+
+<script type="text/javascript">
+    function loadBar() {
+        document.getElementById("nav-placeholder").innerHTML = '<object type="text/html" data="../public/navbar.html" ></object>';
+    }
+</script>

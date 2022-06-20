@@ -1,0 +1,125 @@
+<style>
+    .glider {
+        height: 300px;
+        width: 300px;
+        position: relative;
+    }
+
+    input {
+        max-height: 200px;
+        max-width: 200px;
+        align-content: center;
+    }
+
+    .product{
+        position: relative;
+    }
+
+    .glider-prev,
+    .glider-next {
+        position: relative;
+    }
+
+    .slider__info {
+        background: rgba(0, 0, 0, 0.35);
+        left: 0;
+        bottom: 5px;
+        position: absolute;
+    }
+
+    .slider__info h3 {
+        font-size: 1em;
+        color: #fff;
+    }
+
+</style>
+
+
+<h3>Apple Products</h3>
+<div class="glider-contain">
+    <div class="glider">
+        <div class="product">
+            <input type="image" id="11" src="https://static.wikia.nocookie.net/ipod/images/7/7a/AirTag_front_back.png" alt="Airtag" onClick="Info(11);">
+            <div class="slider-info">
+                <h4>Airtags</h4>
+            </div>
+        </div>
+        <div class="product">
+            <input type="image" id="12" src="https://static.wikia.nocookie.net/ipod/images/8/8b/Apple_TV_4K_1st_front_Siri-black.png" alt="AppleTV 4K" onClick="Info(12);">
+            <div class="slider-info">
+                <h4>AppleTV 4K</h4>
+            </div>
+        </div>
+        <div class="product">
+            <input type="image" id="13" src="https://static.wikia.nocookie.net/ipod/images/c/ce/Series_4.PNG" alt="Apple Watch" onClick="Info(13);">
+            <div class="slider-info">
+                <h4>Apple Watch</h4>
+            </div>
+        </div>
+        <div class="product">
+            <input type="image" id="14" src="https://static.wikia.nocookie.net/ipod/images/f/fd/HomePod_mini_white.png" alt="Homepod Mini" onClick="Info(14);">
+            <div class="slider-info">
+                <h4>Homepod Mini</h4>
+            </div>
+        </div>
+        <div class="product">
+            <input type="image" id="15" src="https://static.wikia.nocookie.net/ipod/images/c/c5/IMac_Early_2021.jpeg" alt="iMac" onClick="Info(15);">
+            <div class="slider-info">
+                <h4>iMac</h4>
+            </div>
+        </div>
+        <div class="product">
+            <input type="image" id="16" src="https://static.wikia.nocookie.net/ipod/images/8/84/IPad_mini_white_and_black.png" alt="iPad Mini" onClick="Info(16);">
+            <div class="slider-info">
+                <h4>IPad Mini</h4>
+            </div>
+        </div>
+        <div class="product">
+            <input type="image" id="17" src="https://static.wikia.nocookie.net/ipod/images/4/41/Iphone-11-and-11-pro-release-date.jpg" alt="iPhone" onClick="Info(17);">
+            <div class="slider-info">
+                <h4>iPhone</h4>
+            </div>
+        </div>
+        <div class="product">
+            <input type="image" id="18" src="https://static.wikia.nocookie.net/ipod/images/2/2e/Apple_AirPods_Pro_and_wireless_charging_case.jpg" alt="AirPods Pro" onClick="Info(18);">
+            <div class="slider-info">
+                <h4>AirPods Pro</h4>
+            </div>
+        </div>
+        <div class="product">
+            <input type="image" id="19" src="https://static.wikia.nocookie.net/ipod/images/2/2e/Apple_Remotes_white_aluminum.png" alt="Apple Remote" onClick="Info(19);">
+            <div class="slider-info">
+                <h4>Apple Remote</h4>
+            </div>
+        </div>
+        <div class="product">
+            <input type="image" id="20" src="https://static.wikia.nocookie.net/ipod/images/a/a6/Mouse.PNG" alt="Magic Mouse 2" onClick="Info(20);">
+            <div class="slider-info">
+                <h4>Magic Mouse 2</h4>
+            </div>
+        </div>
+
+
+    </div>
+    <button aria-label="Previous" class="glider-prev">«</button>
+    <button aria-label="Next" class="glider-next">»</button>
+    <div role="tablist" class="dots"></div>
+    
+</div>
+
+<script>
+    new Glider(document.querySelector('.glider'), {
+        slidesToShow: 1,
+        dots: '.dots',
+        dragDistance: false,
+        arrows: {
+            prev: '.glider-prev',
+            next: '.glider-next',
+        }
+    });
+
+    function Info(id) {
+        const host = "http://localhost:3000";
+        window.location = `${host}/product/apple/${id}`;
+    }
+</script>

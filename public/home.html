@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Home Page</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+    crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="glider.css">
+    <script src="glider.js"></script>
+</head>
+
+<style>
+    h2, div {
+        text-align: center;
+    }
+
+</style>
+
+<body>
+
+   
+    <!-- Navbar -->
+  <!-- <h2 class="text-primary">Bootstrap Navbar</h2> -->
+ <div id="nav-placeholder">
+
+ </div>
+
+    <h2>Homepage</h2>
+    <hr />
+    
+    <div id="productlist">
+        <p style="text-align:center;">Click on image below to get products<p></p>
+        <input type="image" id="Apple" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/800px-Apple_logo_black.svg.png" width="100" height="100"/>
+        <p>Apple</p>
+        <br/><br/>
+        <input type="image" id="Google" src="https://pbs.twimg.com/profile_images/1455185376876826625/s1AjSxph_400x400.jpg" width="100" height="100" />
+        <p>Google</p>
+    </div>
+
+
+</body>
+
+<script>
+
+$(function () {
+    $('#nav-placeholder').load("navbar.html");
+
+    $('#Apple').on("click", function () {
+        $('#productlist').load("/appleslider.html")
+
+    })
+
+    $('#Google').on("click", function () {
+        $('#productlist').load("/googleslider.html")
+
+    })
+
+})
+
+
+</script>
+
+
+
+
+
+</html>

@@ -1,0 +1,42 @@
+<style>
+    table {
+        width: 50%;
+    }
+    table, th, td {
+        border: 1px solid black;
+        text-align: center;
+    }
+
+</style>
+
+<hr/>
+{{#each res}}
+<ol>
+
+        <li>{{this._id}}</li>
+        {{#each products}}
+        <ol>
+            <li>{{this.name}}</li>
+        </ol>
+        {{/each}}
+    
+</ol>
+{{/each}}
+
+{{!-- <table>
+    <tbody>
+        <tr>
+            <th>Order ID</th>
+            <th>Products</th>
+
+        </tr>
+    {{#each res}}
+        <tr>
+            <td>{{this._id}}</td>
+            {{#each products}}
+                <td>{{this.name}}</td>
+            {{/each}}
+        </tr>
+    {{/each}}
+    </tbody>
+</table> --}}
