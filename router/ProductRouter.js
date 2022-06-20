@@ -26,6 +26,19 @@ router.get("/product/google/:id", async (req, resp) => {
     }
 });
 
+router.post("/product/review", async (req, resp) => {
+    const {words} = req.body;
+    
+    const review = new Review({
+        createdTime: new Date(),
+        desc: words,
+    });
+
+    await review.save();
+
+    resp.send("Review submitted!");
+});
+
 
 
 
